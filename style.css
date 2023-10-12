@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 html,body{
@@ -12,17 +13,23 @@ html,body{
 #main{
     width: 100%;
     height: 100vh;
-    background-color: black;
 }
 
 #back{
     width: 100%;
     height: 100vh;
 }
+
+#back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 #top{
+    pointer-events: none;
     width: 100%;
     height: 100vh;
-    background-color:rgb(80, 80, 80);
 
     position: absolute;
     top: 0;
@@ -56,9 +63,9 @@ html,body{
 }
 
 #nav a{
+    pointer-events: all;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: 500;
     color: white;
@@ -68,7 +75,7 @@ html,body{
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0,-40%);
     
     width: 100%;
     display: flex;
@@ -77,16 +84,14 @@ html,body{
 
 #heroLeft{
     min-width: 50%;
-    /* background-color: rgb(0, 181, 0); */
 }
 #heroLeft .elem{
-    height: 8.2vw;
-    /* background-color: red; */
+    height: 9vw;
     overflow: hidden;
 }
 
 #heroLeft .elem h1{
-    line-height: 0.85;
+    line-height: 0.9;
     font-family: "kajiro";
     color: white;
     font-weight: 100;
@@ -94,13 +99,39 @@ html,body{
 }
 
 #heroLeft button{
-    padding:  .8vw 2vw;
+    pointer-events: all;
+    padding:  .5vw 2vw;
     font-size: 3vw;
     margin-top: 2vw;
     font-family: 'kajiro';
 }
 
 #heroRight{
-    min-width: 25%;
-    background-color: rgb(83, 199, 245);
+    display: flex;
+    flex-direction: column;
+    /* align-items:flex-end; */
+    width: 17%;
+    color: white;
 }
+
+#heroRight p{
+    font-size: 12px;
+    font-weight: 300;
+    text-align: right;
+}
+
+#heroRight #imageDiv{
+    width: 100%;
+    height: 170px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    background-image: url(https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60);
+    background-size: cover;
+    background-position:50% 40%;
+}
+
+#heroRight p:nth-child(3){
+    margin-bottom: 60px;
+}
+
