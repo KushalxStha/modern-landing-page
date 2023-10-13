@@ -86,12 +86,22 @@ html,body{
     min-width: 50%;
 }
 #heroLeft .elem{
-    height: 9vw;
+    height: 8vw;
     overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#heroLeft .elem h1:nth-child(1){
+    top: 0;
 }
 
 #heroLeft .elem h1{
-    line-height: 0.9;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    line-height: 0.85;
     font-family: "kajiro";
     color: white;
     font-weight: 100;
@@ -109,7 +119,7 @@ html,body{
 #heroRight{
     display: flex;
     flex-direction: column;
-    /* align-items:flex-end; */
+    align-items:flex-end;
     width: 17%;
     color: white;
 }
